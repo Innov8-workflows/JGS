@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /case-studies/bramley-electrical/
+Disallow: /case-studies/mn-electrical/
+
+Sitemap: https://www.jgslimited.co.uk/sitemap.xml
