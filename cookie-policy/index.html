@@ -219,9 +219,14 @@
 
   <h2>Third Party Services</h2>
   <div class="red-rule"></div>
-  <p>We use <strong>Google Analytics</strong> to help us understand how visitors use our website. Google Analytics uses cookies to collect information about your visit in an anonymised form, including the number of visitors, where visitors have come from, and the pages they visited.</p>
-  <p>For more information on how Google uses this data, visit <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
-  <p>We do not use Facebook Pixel, advertising networks, or any other third-party tracking beyond Google Analytics.</p>
+  <p>We use the following third-party services to help operate this website. These services only process visitor data after you have given consent via our cookie banner.</p>
+  <ul>
+    <li><strong>Google Analytics</strong> — helps us understand how visitors use our website. Google Analytics uses cookies to collect information about your visit in an anonymised form, including the number of visitors, where visitors have come from, and the pages they visited. For more information, visit <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</li>
+    <li><strong>Innov8 Workflows analytics</strong> — Innov8 Workflows Ltd (<a href="https://innov8workflows.co.uk" target="_blank" rel="nofollow noopener">innov8workflows.co.uk</a>) processes anonymised visit data, click events (phone calls, WhatsApp messages, form submissions) and page views on our behalf so we can understand how customers interact with our site and improve our service.</li>
+    <li><strong>Web3Forms</strong> — when you submit our contact form, your message is delivered to us via <a href="https://web3forms.com" target="_blank" rel="nofollow noopener">Web3Forms</a>. They only process your form data (name, phone, email, address, message) for the purpose of delivering your enquiry to us.</li>
+  </ul>
+  <p>We do not use Facebook Pixel, advertising networks, or any other third-party tracking beyond the services listed above.</p>
+  <p>You can withdraw consent at any time by clearing your cookies for this site, after which all consent-gated tracking will stop until you opt in again.</p>
 
   <h2>Contact Us</h2>
   <div class="red-rule"></div>
@@ -403,6 +408,16 @@ function resetCookieConsent() {
 
   // Only load Google Analytics if accepted
   function loadAnalytics() {
+    /* Innov8 Workflows CRM tracker */
+    if (!window.__innov8TrackLoaded) {
+      window.__innov8TrackLoaded = true;
+      var t = document.createElement('script');
+      t.defer = true;
+      t.src = 'https://crm.innov8workflows.co.uk/track.js';
+      t.setAttribute('data-id', 'proj_996b8b8c12b2');
+      document.head.appendChild(t);
+    }
+
     // ── Replace G-XXXXXXXXXX with your real GA4 Measurement ID ──
     var GA_ID = 'G-XXXXXXXXXX';
     if (!GA_ID || GA_ID === 'G-XXXXXXXXXX') return; // skip if not configured

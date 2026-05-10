@@ -6,7 +6,7 @@
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com; frame-ancestors 'none';"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://crm.innov8workflows.co.uk; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://crm.innov8workflows.co.uk; frame-ancestors 'none';"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Customer Testimonials | JGS Construction Services Derbyshire</title>
 <meta name="description" content="Read real customer reviews for JGS Construction Services. Verified testimonials from homeowners across Derbyshire — Belper, Ripley, Kilburn, Heanor, Codnor and more. Derbyshire County Council Trusted Trader.">
 <meta name="keywords" content="JGS Construction testimonials, driveway reviews Derbyshire, customer reviews Belper, JGS reviews Ripley">
@@ -366,6 +366,16 @@ document.querySelectorAll('.mob-link').forEach(l=>l.addEventListener('click',()=
 
   // Only load Google Analytics if accepted
   function loadAnalytics() {
+    /* Innov8 Workflows CRM tracker */
+    if (!window.__innov8TrackLoaded) {
+      window.__innov8TrackLoaded = true;
+      var t = document.createElement('script');
+      t.defer = true;
+      t.src = 'https://crm.innov8workflows.co.uk/track.js';
+      t.setAttribute('data-id', 'proj_996b8b8c12b2');
+      document.head.appendChild(t);
+    }
+
     // ── Replace G-XXXXXXXXXX with your real GA4 Measurement ID ──
     var GA_ID = 'G-XXXXXXXXXX';
     if (!GA_ID || GA_ID === 'G-XXXXXXXXXX') return; // skip if not configured
