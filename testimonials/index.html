@@ -61,7 +61,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(17,17,17,0.9
 .testi-google-link svg{width:22px;height:22px}
 .testi-google-note{font-size:13px;color:var(--grey);max-width:680px;line-height:1.6;font-weight:300}
 .testi-card{background:#fff;padding:40px;border-radius:4px;border-top:4px solid var(--red);box-shadow:0 4px 24px rgba(0,0,0,0.06);display:flex;flex-direction:column;transition:transform 0.2s,box-shadow 0.2s}.testi-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.12)}
-.testi-stars{color:var(--yellow);font-size:18px;background:var(--black);display:inline-block;padding:4px 10px;border-radius:2px;margin-bottom:16px;letter-spacing:2px}
+.testi-stars{color:var(--yellow);font-size:16px;background:var(--black);display:inline-flex;align-items:center;gap:8px;padding:5px 12px;border-radius:2px;margin-bottom:16px;letter-spacing:2px;line-height:1}
+.testi-stars svg{width:16px;height:16px;flex-shrink:0}
 .testi-service{display:inline-block;font-family:'Barlow Condensed',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--red);margin-bottom:16px}
 .testi-card p{font-size:15px;line-height:1.8;color:#444;font-weight:300;font-style:italic;flex:1}
 .testi-footer{margin-top:24px;padding-top:20px;border-top:1px solid var(--light-grey);display:flex;justify-content:space-between;align-items:flex-end}
@@ -159,84 +160,84 @@ footer{background:#0a0a0a;border-top:1px solid #1a1a1a;padding:48px 80px;display
   <div class="testi-grid">
 
     <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
+      <div class="testi-stars"><svg viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="m6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>★★★★★</div>
       <span class="testi-service">New Driveway</span>
       <p>"JGS Construction did a fantastic job on our drive. Would definitely recommend them. The whole team worked together professionally and everything was explained by Joe along the way. Well done to you all."</p>
       <div class="testi-footer"><div><div class="testi-author">Wendy Ford</div><div class="testi-location">Google Review · 1 month ago</div></div></div>
     </div>
 
     <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
+      <div class="testi-stars"><svg viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="m6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>★★★★★</div>
       <span class="testi-service">New Driveway</span>
       <p>"Excellent job from start to finish, constructing a new driveway. Would highly recommend, thanks Joe and the team for all your hard work."</p>
       <div class="testi-footer"><div><div class="testi-author">Chris Allen</div><div class="testi-location">Google Review · 3 months ago</div></div></div>
     </div>
 
     <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
+      <div class="testi-stars"><svg viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="m6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>★★★★★</div>
       <span class="testi-service">Front Garden, Paths &amp; Steps</span>
       <p>"These guys came recommended by my cousin and a good friend so I didn't bother getting other quotes, just went on recommendation. They have done a fantastic job of transforming our front garden, paths and steps to the front door…"</p>
       <div class="testi-footer"><div><div class="testi-author">Carol Parkin</div><div class="testi-location">Google Local Guide · 1 month ago</div></div></div>
     </div>
 
     <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
+      <div class="testi-stars"><svg viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="m6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>★★★★★</div>
       <span class="testi-service">New Driveway</span>
       <p>"Highly recommend JGS, we are so pleased with our new driveway. John and everyone worked really hard together, the work was done professionally to a high standard, leaving everywhere clean and tidy afterwards. Couldn't have wished for a better result."</p>
       <div class="testi-footer"><div><div class="testi-author">Claire Bobeszko</div><div class="testi-location">Google Local Guide · 7 months ago</div></div></div>
     </div>
 
     <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
+      <div class="testi-stars"><svg viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="m6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>★★★★★</div>
       <span class="testi-service">Tarmac Drive with Drainage</span>
       <p>"The team have just finished my drive. 3 days to excavate, install new drainage, lay edging, paved and gravel border, lay sub base and tarmac…"</p>
       <div class="testi-footer"><div><div class="testi-author">Alan Sherwood</div><div class="testi-location">Google Review · 8 months ago</div></div></div>
     </div>
 
     <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
+      <div class="testi-stars"><svg viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="m6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>★★★★★</div>
       <span class="testi-service">Tarmac Drive &amp; Retaining Wall</span>
       <p>"Would highly recommend JGS. Just had our driveway tarmac and retaining wall rebuilt. The guys are all professional in what they do and take pride in their work. Clean up afterwards at the end of the day…"</p>
       <div class="testi-footer"><div><div class="testi-author">Chris Sargisson</div><div class="testi-location">Google Local Guide · 1 year ago</div></div></div>
     </div>
 
     <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
+      <div class="testi-stars"><svg viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="m6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>★★★★★</div>
       <span class="testi-service">Tarmac Drive</span>
       <p>"The team of John, Joe, Sam, Ryan, Chris and Brad have just completed a superb tarmac drive for us. They were very professional from start to finish and always friendly and polite. I cannot recommend them highly enough."</p>
       <div class="testi-footer"><div><div class="testi-author">Howard &amp; Janet Beedle</div><div class="testi-location">Google Review · 2 years ago</div></div></div>
     </div>
 
     <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
+      <div class="testi-stars"><svg viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="m6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>★★★★★</div>
       <span class="testi-service">New Driveway</span>
       <p>"Highly recommended. Very professional service, competitive pricing, excellent end result. They did our neighbours drive over 7 years ago and it still looks brilliant so I had them do ours the same."</p>
       <div class="testi-footer"><div><div class="testi-author">Adam Howard</div><div class="testi-location">Google Local Guide · 2 years ago</div></div></div>
     </div>
 
     <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
+      <div class="testi-stars"><svg viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="m6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>★★★★★</div>
       <span class="testi-service">Tarmac Drive with Granite</span>
       <p>"Thank you to John, Chris, Joe, Ryan, and Sam — they are a fantastic team, nothing was too much trouble for them. They worked tirelessly to transform our old worn-out tarmac drive to become one that looks absolutely fabulous with granite stone…"</p>
       <div class="testi-footer"><div><div class="testi-author">Kevin Slater</div><div class="testi-location">Google Review · 3 years ago</div></div></div>
     </div>
 
     <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
+      <div class="testi-stars"><svg viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="m6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>★★★★★</div>
       <span class="testi-service">Multi-Service</span>
       <p>"Currently using JGS on my property. Absolutely incredible service. Really knowledgeable and professional. And willing to help and advise all the way through the project. Can't recommend enough!"</p>
       <div class="testi-footer"><div><div class="testi-author">George Smith</div><div class="testi-location">Google Local Guide · 3 years ago</div></div></div>
     </div>
 
     <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
+      <div class="testi-stars"><svg viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="m6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>★★★★★</div>
       <span class="testi-service">Tarmac &amp; Cobbles</span>
       <p>"A really polite and genuine group of workers who did a tidy job of tarmac and marrying up some existing cobbles to the new tarmac. They checked the work was OK before leaving/billing…"</p>
       <div class="testi-footer"><div><div class="testi-author">Andrew Bevan</div><div class="testi-location">Google Local Guide · 4 years ago</div></div></div>
     </div>
 
     <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
+      <div class="testi-stars"><svg viewBox="0 0 48 48" aria-label="Google"><path fill="#FFC107" d="M43.611 20.083H42V20H24v8h11.303c-1.649 4.657-6.08 8-11.303 8c-6.627 0-12-5.373-12-12s5.373-12 12-12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C12.955 4 4 12.955 4 24s8.955 20 20 20s20-8.955 20-20c0-1.341-.138-2.65-.389-3.917z"/><path fill="#FF3D00" d="m6.306 14.691l6.571 4.819C14.655 15.108 18.961 12 24 12c3.059 0 5.842 1.154 7.961 3.039l5.657-5.657C34.046 6.053 29.268 4 24 4C16.318 4 9.656 8.337 6.306 14.691z"/><path fill="#4CAF50" d="M24 44c5.166 0 9.86-1.977 13.409-5.192l-6.19-5.238A11.91 11.91 0 0 1 24 36c-5.202 0-9.619-3.317-11.283-7.946l-6.522 5.025C9.505 39.556 16.227 44 24 44z"/><path fill="#1976D2" d="M43.611 20.083H42V20H24v8h11.303a12.04 12.04 0 0 1-4.087 5.571l.003-.002l6.19 5.238C36.971 39.205 44 34 44 24c0-1.341-.138-2.65-.389-3.917z"/></svg>★★★★★</div>
       <span class="testi-service">Block Paving &amp; Tarmac Driveway</span>
       <p>"A very satisfied customer. Professional service from start to finish from a polite team of workers. Blocked-paved/tarmac driveway to a very high standard. Would highly recommend to anyone."</p>
       <div class="testi-footer"><div><div class="testi-author">Glyn Allsop</div><div class="testi-location">Google Review · 4 years ago</div></div></div>
