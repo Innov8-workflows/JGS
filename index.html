@@ -457,6 +457,11 @@ footer{background:#0d0f13;color:rgba(255,255,255,.7);padding:4rem 0 1.6rem}
   .foot-accred-row { gap: 1rem 1.4rem; }
 }
 
+
+.svc-more { transition: gap .2s ease, color .2s ease; }
+.svc-more:hover { color: var(--red-dark); gap: .55rem !important; }
+.svc-more:hover span { transform: translateX(2px); display: inline-block; transition: transform .2s ease; }
+
 </style>
 </head>
 <body>
@@ -470,10 +475,9 @@ footer{background:#0d0f13;color:rgba(255,255,255,.7);padding:4rem 0 1.6rem}
     <ul class="nav-links" id="navlinks">
       <li><a href="#services">Services</a></li>
       <li><a href="#work">Our Work</a></li>
-      <li><a href="#why">Why Us</a></li>
       <li><a href="#reviews">Reviews</a></li>
-      <li><a href="#areas">Areas</a></li>
-      <li><a href="faq.html">FAQs</a></li>
+      <li><a href="/case-studies/">Case Studies</a></li>
+      <li><a href="/testimonials/">Testimonials</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="nav-cta">
@@ -552,31 +556,37 @@ footer{background:#0d0f13;color:rgba(255,255,255,.7);padding:4rem 0 1.6rem}
         <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></div>
         <h3>Block Paving</h3>
         <p>Hard-wearing block paved driveways and paths, laid on a properly compacted base with crisp edging detail.</p>
+      <a href="/block-paving/" class="svc-more" style="display:inline-flex;align-items:center;gap:.3rem;margin-top:.9rem;font-family:var(--head);font-weight:700;font-size:.92rem;color:var(--red);text-decoration:none">Learn more <span aria-hidden="true">→</span></a>
       </div>
       <div class="svc-card reveal">
         <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17h18"/><path d="M5 17l2-9h10l2 9"/><path d="M9 12h6"/></svg></div>
         <h3>Tarmac Drives</h3>
         <p>Smooth, durable tarmac surfacing for driveways and larger areas, finished with block or stone edge restraint.</p>
+      <a href="/tarmac-drives/" class="svc-more" style="display:inline-flex;align-items:center;gap:.3rem;margin-top:.9rem;font-family:var(--head);font-weight:700;font-size:.92rem;color:var(--red);text-decoration:none">Learn more <span aria-hidden="true">→</span></a>
       </div>
       <div class="svc-card reveal">
         <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18"/></svg></div>
         <h3>Patios &amp; Slabbing</h3>
         <p>Indian sandstone, porcelain and paving slab patios that turn the back garden into proper usable space.</p>
+      <a href="/patios/" class="svc-more" style="display:inline-flex;align-items:center;gap:.3rem;margin-top:.9rem;font-family:var(--head);font-weight:700;font-size:.92rem;color:var(--red);text-decoration:none">Learn more <span aria-hidden="true">→</span></a>
       </div>
       <div class="svc-card reveal">
         <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20"/><path d="M6 12V7M12 12V5M18 12V7"/><path d="M4 16h16v3H4z"/></svg></div>
         <h3>Drop Kerbs</h3>
         <p>Vehicle crossings and dropped kerbs to get safe, legal access onto your new driveway.</p>
+      <a href="/drop-kerbs/" class="svc-more" style="display:inline-flex;align-items:center;gap:.3rem;margin-top:.9rem;font-family:var(--head);font-weight:700;font-size:.92rem;color:var(--red);text-decoration:none">Learn more <span aria-hidden="true">→</span></a>
       </div>
       <div class="svc-card reveal">
         <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V8M10 21V8M16 21V8M22 21V8"/><path d="M2 8h20"/><path d="M2 14h20"/></svg></div>
         <h3>Fencing</h3>
         <p>Closeboard, panel and post-and-rail fencing with concrete posts — fitted square, solid and built to weather.</p>
+      <a href="/fencing-landscapes/" class="svc-more" style="display:inline-flex;align-items:center;gap:.3rem;margin-top:.9rem;font-family:var(--head);font-weight:700;font-size:.92rem;color:var(--red);text-decoration:none">Learn more <span aria-hidden="true">→</span></a>
       </div>
       <div class="svc-card reveal">
         <div class="svc-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a7 7 0 0 0 7-7c0-3-3-7-7-12C8 8 5 12 5 15a7 7 0 0 0 7 7z"/></svg></div>
         <h3>Drainage &amp; Groundworks</h3>
         <p>Soakaways, channel drainage and full site groundworks to keep surfaces compliant and water where it belongs.</p>
+      <a href="/drainage-work/" class="svc-more" style="display:inline-flex;align-items:center;gap:.3rem;margin-top:.9rem;font-family:var(--head);font-weight:700;font-size:.92rem;color:var(--red);text-decoration:none">Learn more <span aria-hidden="true">→</span></a>
       </div>
     </div>
   </div>
@@ -882,22 +892,22 @@ footer{background:#0d0f13;color:rgba(255,255,255,.7);padding:4rem 0 1.6rem}
       <div class="foot-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="#services">Block Paving</a></li>
-          <li><a href="#services">Tarmac Drives</a></li>
-          <li><a href="#services">Patios</a></li>
-          <li><a href="#services">Drop Kerbs</a></li>
-          <li><a href="#services">Fencing</a></li>
-          <li><a href="#services">Drainage</a></li>
+          <li><a href="/block-paving/">Block Paving</a></li>
+          <li><a href="/tarmac-drives/">Tarmac Drives</a></li>
+          <li><a href="/patios/">Patios</a></li>
+          <li><a href="/drop-kerbs/">Drop Kerbs</a></li>
+          <li><a href="/fencing-landscapes/">Fencing &amp; Landscaping</a></li>
+          <li><a href="/drainage-work/">Drainage Work</a></li>
         </ul>
       </div>
       <div class="foot-col">
         <h4>Company</h4>
         <ul>
+          <li><a href="/case-studies/">Case Studies</a></li>
+          <li><a href="/testimonials/">Testimonials</a></li>
           <li><a href="#work">Our Work</a></li>
-          <li><a href="#why">Why Choose Us</a></li>
           <li><a href="#reviews">Reviews</a></li>
           <li><a href="#areas">Areas Covered</a></li>
-          <li><a href="faq.html">FAQs</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
