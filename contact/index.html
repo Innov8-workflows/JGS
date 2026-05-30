@@ -930,6 +930,39 @@ if(burger && navlinks){
   var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:.15});
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 })();
+
+// Contact form WhatsApp redirect
+var JGS_WHATSAPP = '447702543174';
+function showFormError(msg) {
+  var el = document.getElementById('formError');
+  if (el) { el.textContent = msg; el.style.display = 'block'; }
+}
+function submitForm() {
+  var name    = document.getElementById('name').value.trim();
+  var phone   = document.getElementById('phone').value.trim();
+  var email   = document.getElementById('email').value.trim();
+  var address = document.getElementById('address').value.trim();
+  var service = document.getElementById('service').value;
+  var message = document.getElementById('message').value.trim();
+  if (!name || !phone) { showFormError("Please fill in at least your name and phone number."); return; }
+  var text = "Hi JGS, I'd like a quote.
+
+Name: " + name + "
+Phone: " + phone;
+  if (email)   text += "
+Email: " + email;
+  if (address) text += "
+Address: " + address;
+  if (service) text += "
+Service: " + service;
+  if (message) text += "
+
+" + message;
+  var url = "https://wa.me/" + JGS_WHATSAPP + "?text=" + encodeURIComponent(text);
+  var w = window.open(url, '_blank', 'noopener,noreferrer');
+  if (!w) { window.location.href = url; }
+}
+
 </script>
 </body>
 </html>

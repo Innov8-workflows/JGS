@@ -883,6 +883,13 @@ if(burger && navlinks){
   var io = new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, {threshold:.15});
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 })();
+
+// Cookie reset (clears stored consent and reloads)
+function resetCookieConsent() {
+  localStorage.removeItem('jgs_cookie_consent');
+  window.location.href = '/';
+}
+
 </script>
 </body>
 </html>
