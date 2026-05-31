@@ -1132,6 +1132,7 @@ navlinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navlink
 // Before/After slider
 (function(){
   const s=document.getElementById('baSlider'),after=document.getElementById('baAfter'),handle=document.getElementById('baHandle');
+  if(!s || !after || !handle) return;
   let drag=false;
   function set(x){const r=s.getBoundingClientRect();let p=(x-r.left)/r.width*100;p=Math.max(2,Math.min(98,p));after.style.clipPath='inset(0 0 0 '+p+'%)';handle.style.left=p+'%'}
   const start=()=>drag=true,end=()=>drag=false;
