@@ -492,6 +492,47 @@ footer{background:#0d0f13;color:rgba(255,255,255,.7);padding:4rem 0 1.6rem}
   .ba-mini-slider { height: 220px; }
 }
 
+
+/* === Gallery "more on case studies" CTA card === */
+a.gal-empty {
+  display: flex; align-items: center; justify-content: center;
+  text-decoration: none; color: inherit;
+  background: linear-gradient(135deg, var(--ink) 0%, #1f242e 100%);
+  border-radius: var(--r); overflow: hidden;
+  position: relative; transition: transform .25s ease, box-shadow .25s ease;
+  min-height: 200px; padding: 1.8rem;
+  border: none;
+}
+a.gal-empty::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 70% 30%, rgba(209,10,10,.25), transparent 60%);
+  pointer-events: none;
+}
+a.gal-empty:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
+.gal-empty-inner { position: relative; z-index: 1; text-align: center; color: #fff; max-width: 240px; }
+.gal-empty-tag {
+  display: inline-block; background: var(--red); color: #fff;
+  font-family: var(--head); font-weight: 800; font-size: .65rem;
+  letter-spacing: .16em; padding: 5px 11px; border-radius: 3px;
+  text-transform: uppercase; margin-bottom: 1rem;
+}
+.gal-empty-inner h4 {
+  font-family: var(--head); font-weight: 800; font-size: 1.15rem;
+  color: #fff; margin-bottom: .55rem; line-height: 1.2; letter-spacing: -.01em;
+}
+.gal-empty-inner p {
+  font-size: .85rem; line-height: 1.5; color: rgba(255,255,255,.7);
+  margin-bottom: 1.2rem;
+}
+.gal-empty-cta {
+  display: inline-flex; align-items: center; gap: .4rem;
+  font-family: var(--head); font-weight: 800; font-size: .82rem;
+  letter-spacing: .08em; text-transform: uppercase; color: var(--gold);
+  border-bottom: 1.5px solid var(--gold); padding-bottom: 2px;
+  transition: gap .2s ease;
+}
+a.gal-empty:hover .gal-empty-cta { gap: .65rem; }
+
 </style>
 </head>
 <body>
@@ -693,7 +734,14 @@ footer{background:#0d0f13;color:rgba(255,255,255,.7);padding:4rem 0 1.6rem}
       <div class="gal-item reveal"><img data-img="gal2" alt="New tarmac driveway with block edging"><span class="cap">Tarmac drive &amp; edging</span></div>
       <div class="gal-item reveal"><img data-img="gal3" alt="Large tarmac area with fencing"><span class="cap">Tarmac &amp; fencing</span></div>
       <div class="gal-item reveal"><img data-img="gal4" alt="Driveway project"><span class="cap">Driveway project</span></div>
-      <div class="gal-empty reveal">More on the<br>Case Studies page →</div>
+      <a href="/case-studies/" class="gal-empty reveal" aria-label="View all case studies">
+        <div class="gal-empty-inner">
+          <span class="gal-empty-tag">More Work</span>
+          <h4>See the full transformations</h4>
+          <p>Drag-to-compare before &amp; after sliders for every project on our Case Studies page.</p>
+          <span class="gal-empty-cta">View Case Studies <span aria-hidden="true">&rarr;</span></span>
+        </div>
+      </a>
     </div>
   </div>
 </section>
