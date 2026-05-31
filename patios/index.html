@@ -601,6 +601,36 @@ section a:hover { color: var(--red-dark); border-bottom-color: var(--red); }
 .loc-tag{font-family:var(--head),sans-serif;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:8px 18px;border:1px solid rgba(255,255,255,0.2);color:rgba(255,255,255,0.7);border-radius:2px}
 
 @media(max-width:768px){nav{padding:0 20px}.nav-links{display:none}.nav-hamburger{display:flex}.page-hero{padding:60px 24px 48px}.main-content{padding:48px 24px}.two-col{grid-template-columns:1fr;gap:32px}.two-col img{height:240px}.locations{padding:48px 24px}.cta-strip{padding:48px 24px;flex-direction:column}footer{padding:32px 24px;flex-direction:column;align-items:flex-start;gap:16px}}
+
+/* === Header visibility hard-overrides (top-bar always solid, nav guaranteed) === */
+header#hdr {
+  background: rgba(21, 23, 28, 0.96) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.06), 0 4px 24px rgba(0,0,0,0.35);
+}
+header#hdr.scrolled {
+  background: rgba(255, 255, 255, 0.97) !important;
+  box-shadow: 0 1px 0 var(--line), 0 10px 30px -22px rgba(0,0,0,0.5);
+}
+/* Always-visible brand text (white on dark default, dark on scrolled) */
+header#hdr .brand .bt { color: #fff !important; }
+header#hdr.scrolled .brand .bt { color: var(--ink) !important; }
+/* Always-visible nav links */
+header#hdr .nav-links a { color: #fff !important; }
+header#hdr.scrolled .nav-links a { color: var(--ink-2) !important; }
+header#hdr .burger span { background: #fff !important; }
+header#hdr.scrolled .burger span { background: var(--ink) !important; }
+/* Force responsive breakpoint behaviour */
+@media (min-width: 981px) {
+  header#hdr .nav-links { display: flex !important; }
+  header#hdr .burger { display: none !important; }
+}
+@media (max-width: 980px) {
+  header#hdr .nav-links:not(.open) { display: none !important; }
+  header#hdr .burger { display: flex !important; }
+}
+
 </style>
 </head>
 <body>
