@@ -3,4 +3,10 @@ Allow: /
 Disallow: /case-studies/bramley-electrical/
 Disallow: /case-studies/mn-electrical/
 
+Disallow: /review/
+
+Disallow: /2017/
+
+Disallow: /2018/
+
 Sitemap: https://www.jgslimited.co.uk/sitemap.xml
