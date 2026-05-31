@@ -704,9 +704,14 @@ section a:hover { color: var(--red-dark); border-bottom-color: var(--red); }
     .gallery-masonry { columns: 1; }
   }
 
-/* === case-studies BA slider responsive overrides === */
-.ba-card .ba-after { clip-path: none !important; }
-.ba-card .ba-slider { height: clamp(320px, 50vw, 560px) !important; aspect-ratio: auto !important; }
+
+/* === case-studies BA slider: clip-path reveal === */
+.ba-card .ba-slider { height: clamp(320px, 50vw, 560px) !important; aspect-ratio: auto !important; cursor: ew-resize; }
+.ba-card .ba-before-wrap { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; overflow: visible !important; }
+.ba-card .ba-before { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover; pointer-events: none; }
+.ba-card .ba-after { position: absolute !important; inset: 0 !important; width: 100% !important; height: 100% !important; object-fit: cover; clip-path: inset(0 0 0 50%); pointer-events: none; }
+.ba-card .ba-handle { pointer-events: none; }
+.ba-card .ba-knob { pointer-events: none; }
 .ba-card .ba-info-panel { height: auto !important; min-height: auto; }
 @media (max-width: 980px) {
   .ba-card, .ba-card.reverse { grid-template-columns: 1fr !important; }
@@ -1136,35 +1141,34 @@ if(burger && navlinks){
 </script>
 
 <script>/* case-studies-js-marker */
-// Before/after sliders for each case-study card
+// Clip-path reveal sliders — both images stay perfectly still,
+// only the clip line moves to expose the after image over the before.
 document.querySelectorAll('.ba-slider').forEach(function(slider){
-  var beforeWrap = slider.querySelector('.ba-before-wrap');
-  var beforeImg  = slider.querySelector('.ba-before');
-  var handle     = slider.querySelector('.ba-handle');
-  if(!beforeWrap || !beforeImg || !handle) return;
+  var after  = slider.querySelector('.ba-after');
+  var handle = slider.querySelector('.ba-handle');
+  if(!after || !handle) return;
   var pct = 50, dragging = false;
-  function setPosition(p){
+  function set(p){
     pct = Math.max(1, Math.min(99, p));
-    beforeWrap.style.width = pct + '%';
-    beforeImg.style.width  = slider.offsetWidth + 'px';
-    handle.style.left      = pct + '%';
+    after.style.clipPath = 'inset(0 0 0 ' + pct + '%)';
+    after.style.webkitClipPath = 'inset(0 0 0 ' + pct + '%)';
+    handle.style.left = pct + '%';
   }
   function getX(e){ return e.touches ? e.touches[0].clientX : e.clientX; }
-  function onMove(e){
+  function move(e){
     if(!dragging) return;
     e.preventDefault();
-    var rect = slider.getBoundingClientRect();
-    setPosition(((getX(e) - rect.left) / rect.width) * 100);
+    var r = slider.getBoundingClientRect();
+    set(((getX(e) - r.left) / r.width) * 100);
     slider.classList.add('moved');
   }
-  slider.addEventListener('mousedown',  function(e){ dragging = true; slider.classList.add('dragging'); onMove(e); });
-  slider.addEventListener('touchstart', function(e){ dragging = true; slider.classList.add('dragging'); onMove(e); }, {passive:false});
-  window.addEventListener('mousemove', onMove);
-  window.addEventListener('touchmove', onMove, {passive:false});
-  window.addEventListener('mouseup',   function(){ dragging = false; slider.classList.remove('dragging'); });
-  window.addEventListener('touchend',  function(){ dragging = false; slider.classList.remove('dragging'); });
-  window.addEventListener('resize',    function(){ setPosition(pct); });
-  setTimeout(function(){ setPosition(50); }, 50);
+  slider.addEventListener('mousedown',  function(e){ dragging=true; slider.classList.add('dragging'); move(e); });
+  slider.addEventListener('touchstart', function(e){ dragging=true; slider.classList.add('dragging'); move(e); }, {passive:false});
+  window.addEventListener('mousemove', move);
+  window.addEventListener('touchmove', move, {passive:false});
+  window.addEventListener('mouseup',   function(){ dragging=false; slider.classList.remove('dragging'); });
+  window.addEventListener('touchend',  function(){ dragging=false; slider.classList.remove('dragging'); });
+  set(50);
 });
 </script>
 </body>
