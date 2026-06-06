@@ -665,6 +665,16 @@ header#hdr.scrolled .burger span { background: var(--ink) !important; }
 /* === Reviews carousel touch hint === */
 #revTrack, .rev-track { touch-action: pan-y pinch-zoom; }
 
+
+/* === Hero dark fallback (must paint dark even if JS images don't load on iOS Safari) === */
+.hero { background: var(--ink) !important; }
+.hero-slides { background: var(--ink); }
+.hero-slide { background-color: #1a1d24; }
+.hero-slide .kb { background-color: #15171c; }
+.hero-inner { background: transparent; }
+/* Force text shadow so hero text reads against any background variation */
+.hero h1, .hero h1 .hl, .hero p { text-shadow: 0 2px 18px rgba(0,0,0,.5); }
+
 </style>
 <script type="application/ld+json">
 [
