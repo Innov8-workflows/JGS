@@ -512,17 +512,48 @@ footer{background:#0d0f13;color:rgba(255,255,255,.7);padding:4rem 0 1.6rem}
 }
 .foot-acc img:hover { transform: scale(1.05); }
 @media (max-width: 600px) {
-  .accred .slot img { max-height: 70px; }
+  /* Trust-bar accreditation row — label on own line, badges in 2×2 grid */
+  .accred {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    padding-top: 2rem !important;
+  }
+  .accred .lab {
+    margin-bottom: .25rem;
+    text-align: center;
+    width: 100%;
+  }
+  .accred .slot { flex: 0 0 calc(50% - .6rem); max-width: calc(50% - .6rem); }
+  .accred-slots-wrap, .accred > .slot:nth-of-type(1),
+  .accred > .slot:nth-of-type(2), .accred > .slot:nth-of-type(3),
+  .accred > .slot:nth-of-type(4) {
+    /* Wrap the slots themselves so they grid out under the label */
+  }
+  /* The .accred is flex column above, so to grid the 4 slots into 2x2,
+     we set the slots themselves to flex-basis 45%. The flex-direction:column
+     would line them up vertically, so override with a child wrapper approach:
+     instead make .accred a wrap container while keeping .lab full-width. */
+  .accred {
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 1.2rem !important;
+  }
+  .accred .lab { flex-basis: 100%; }
+  .accred .slot {
+    flex: 0 0 calc(50% - 1rem) !important;
+    max-width: calc(50% - 1rem) !important;
+    justify-content: center !important;
+  }
+  .accred .slot img { max-height: 76px !important; }
+  /* Footer row — keep horizontal but tighter */
   .foot-acc img { max-height: 54px; }
   .foot-accred-row { gap: 1rem 1.4rem; }
 }
-
-
-.svc-more { transition: gap .2s ease, color .2s ease; }
-.svc-more:hover { color: var(--red-dark); gap: .55rem !important; }
-.svc-more:hover span { transform: translateX(2px); display: inline-block; transition: transform .2s ease; }
-
-
+@media (max-width: 380px) {
+  .accred .slot img { max-height: 64px !important; }
+  .foot-acc img { max-height: 46px; }
+}
 /* === Homepage 3-card BA mini-grid === */
 .ba-mini-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.8rem; margin-top: 2.4rem; }
 .ba-mini { background: var(--paper); border-radius: var(--r); overflow: hidden; box-shadow: var(--shadow-sm); display: flex; flex-direction: column; transition: transform .25s ease, box-shadow .25s ease; }
