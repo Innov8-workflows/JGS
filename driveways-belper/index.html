@@ -631,6 +631,53 @@ header#hdr.scrolled .burger span { background: var(--ink) !important; }
   header#hdr .burger { display: flex !important; }
 }
 
+
+/* === Page-hero defensive override (sit flush under fixed header) === */
+body { padding-top: 78px !important; }
+main > .page-hero:first-child,
+main > section.page-hero:first-child {
+  margin-top: 0 !important;
+  background: linear-gradient(135deg, var(--ink) 0%, #1f242e 100%) !important;
+  min-height: auto !important;
+  padding: 3.5rem 1.5rem 3rem !important;
+  display: block !important;
+}
+.page-hero .page-hero-content {
+  max-width: min(1100px, 92%) !important;
+  margin: 0 auto !important;
+  padding: 0 !important;
+  text-align: center;
+}
+.page-hero h1 {
+  font-size: clamp(1.8rem, 5.5vw, 3rem) !important;
+  margin: .8rem 0 !important;
+  line-height: 1.1 !important;
+}
+.page-hero p {
+  font-size: 1rem !important;
+  max-width: 600px !important;
+  margin: 0 auto !important;
+  line-height: 1.65 !important;
+}
+.page-hero .breadcrumb {
+  margin-bottom: .8rem;
+  font-size: .82rem;
+  opacity: .8;
+}
+.page-hero .page-tag {
+  font-family: var(--head); font-weight: 700; font-size: .72rem;
+  letter-spacing: .18em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: .5rem;
+}
+@media (max-width: 600px) {
+  main > .page-hero:first-child,
+  main > section.page-hero:first-child {
+    padding: 2.4rem 1.2rem 2rem !important;
+  }
+  .page-hero h1 { font-size: clamp(1.6rem, 7.5vw, 2.4rem) !important; }
+  .page-hero p { font-size: .95rem !important; }
+}
+
 </style>
 
 
