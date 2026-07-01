@@ -696,6 +696,24 @@ header#hdr.scrolled .burger span { background: var(--ink) !important; }
 /* Force text shadow so hero text reads against any background variation */
 .hero h1, .hero h1 .hl, .hero p { text-shadow: 0 2px 18px rgba(0,0,0,.5); }
 
+
+/* === Services grid — 2x3 on mobile so cards pair up, not full-width === */
+@media(max-width:600px){
+  .svc-grid { grid-template-columns: repeat(2, 1fr) !important; gap: .8rem !important; }
+  .svc-card { padding: 1.1rem .95rem 1.15rem !important; border-radius: 12px !important; }
+  .svc-ico { width: 40px !important; height: 40px !important; border-radius: 9px !important; margin-bottom: .7rem !important; }
+  .svc-ico svg { width: 20px !important; height: 20px !important; stroke-width: 1.8 !important; }
+  .svc-card h3 { font-size: 1rem !important; margin-bottom: .3rem !important; line-height: 1.2 !important; }
+  .svc-card p { font-size: .8rem !important; line-height: 1.45 !important; }
+  .svc-more { font-size: .8rem !important; margin-top: .6rem !important; }
+}
+@media(max-width:380px){
+  .svc-grid { gap: .65rem !important; }
+  .svc-card { padding: .95rem .8rem 1rem !important; }
+  .svc-card h3 { font-size: .95rem !important; }
+  .svc-card p { font-size: .78rem !important; }
+}
+
 </style>
 <script type="application/ld+json">
 [
