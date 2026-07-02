@@ -503,5 +503,22 @@
   </div>
 </footer>
 
+<script>/* JGS conversion tracking — click_to_call / click_whatsapp / generate_lead */
+(function(){
+  function track(name, params){ if(typeof window.gtag==='function'){ try{ window.gtag('event', name, params||{}); }catch(e){} } }
+  document.addEventListener('click', function(e){
+    var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+    if(!a) return;
+    var href = a.getAttribute('href') || '';
+    if(href.slice(0,4).toLowerCase()==='tel:'){
+      track('click_to_call', { phone_number: href.slice(4) });
+      track('generate_lead', { method: 'phone' });
+    } else if(/wa\.me|whatsapp/i.test(href)){
+      track('click_whatsapp', { link_url: href });
+      track('generate_lead', { method: 'whatsapp' });
+    }
+  }, true);
+})();
+</script>
 </body>
 </html>
