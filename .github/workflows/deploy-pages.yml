@@ -36,3 +36,8 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          # This repo's large inline-HTML pages make Pages slow to process;
+          # wait up to 30 min so a slow-but-successful deploy isn't reported
+          # as a failure.
+          timeout: 1800000
