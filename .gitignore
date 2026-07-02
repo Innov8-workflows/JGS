@@ -1,2 +1,23 @@
 # Local-only design reference (not deployed)
 New style/
+
+# --- Local working files — NOT part of the deployed static site ---
+# The site inlines its images as base64 and serves only video/hero-*.mp4.
+# Keep these on disk locally, but never commit them (they bloat the repo
+# and fail the GitHub Pages build).
+
+# Raw video sources (web-compressed copies live in video/)
+/before-after-animation-01.mp4
+/before-after-animation-02.mp4
+/driveway-animation-ba-video.mp4
+/patio-animation.mp4
+
+# Loose before/after working photos dropped in the repo root
+/a[0-9]*.jpg
+/b[0-9]*.jpg
+/about03.jpg
+/before2.1.png
+
+# Screenshots / scratch
+/screenshot*.PNG
+/screenshot*.png
