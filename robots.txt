@@ -9,4 +9,4 @@ Disallow: /2017/
 
 Disallow: /2018/
 
-Sitemap: https://www.jgslimited.co.uk/sitemap.xml
+Sitemap: https://jgslimited.co.uk/sitemap.xml

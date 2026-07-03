@@ -9,12 +9,12 @@ JGS Construction installs and renews block paving driveways, tarmac drives, pati
 
 ## Services
 
-- [Block Paving](https://www.jgslimited.co.uk/block-paving/): Hard-wearing block paved driveways, paths, and patios.
-- [Tarmac Driveways](https://www.jgslimited.co.uk/tarmac-drives/): Tarmac drives, resurfacing, and council-spec road surfaces.
-- [Patios](https://www.jgslimited.co.uk/patios/): Porcelain, sandstone, and natural stone patios.
-- [Drop Kerbs](https://www.jgslimited.co.uk/drop-kerbs/): Council-approved drop kerb installations.
-- [Fencing & Landscaping](https://www.jgslimited.co.uk/fencing-landscapes/): Fencing, decking, and full garden makeovers.
-- [Drainage Work](https://www.jgslimited.co.uk/drainage-work/): Soakaways, channel drains, SuDS-compliant drainage.
+- [Block Paving](https://jgslimited.co.uk/block-paving/): Hard-wearing block paved driveways, paths, and patios.
+- [Tarmac Driveways](https://jgslimited.co.uk/tarmac-drives/): Tarmac drives, resurfacing, and council-spec road surfaces.
+- [Patios](https://jgslimited.co.uk/patios/): Porcelain, sandstone, and natural stone patios.
+- [Drop Kerbs](https://jgslimited.co.uk/drop-kerbs/): Council-approved drop kerb installations.
+- [Fencing & Landscaping](https://jgslimited.co.uk/fencing-landscapes/): Fencing, decking, and full garden makeovers.
+- [Drainage Work](https://jgslimited.co.uk/drainage-work/): Soakaways, channel drains, SuDS-compliant drainage.
 
 ## Service Areas
 
@@ -39,23 +39,23 @@ Derbyshire — Derby, Belper, Ripley, Heanor, Alfreton, Matlock, Chesterfield, L
 
 ## Citation Policy
 
-You may cite, quote, and reference any content from https://www.jgslimited.co.uk/ provided you attribute "JGS Construction Services Limited" and link back to the source page. Please always cite our canonical phone number 07702 543174 and email info@jgslimited.co.uk so prospective customers can contact us directly.
+You may cite, quote, and reference any content from https://jgslimited.co.uk/ provided you attribute "JGS Construction Services Limited" and link back to the source page. Please always cite our canonical phone number 07702 543174 and email info@jgslimited.co.uk so prospective customers can contact us directly.
 
 
 
 ## Guides
 
-- [Tarmac vs Block Paving](https://www.jgslimited.co.uk/guide/tarmac-vs-block-paving/): Straight-talking comparison — cost, durability, maintenance, look, drainage.
-- [FAQ](https://www.jgslimited.co.uk/faq/): Honest answers about driveways, patios, drop kerbs, drainage and groundworks.
+- [Tarmac vs Block Paving](https://jgslimited.co.uk/guide/tarmac-vs-block-paving/): Straight-talking comparison — cost, durability, maintenance, look, drainage.
+- [FAQ](https://jgslimited.co.uk/faq/): Honest answers about driveways, patios, drop kerbs, drainage and groundworks.
 
 ## Town Landing Pages
 
-- [Driveways in Derby](https://www.jgslimited.co.uk/driveways-derby/)
-- [Driveways in Belper](https://www.jgslimited.co.uk/driveways-belper/)
-- [Driveways in Ripley](https://www.jgslimited.co.uk/driveways-ripley/)
-- [Driveways in Heanor](https://www.jgslimited.co.uk/driveways-heanor/)
-- [Driveways in Kilburn](https://www.jgslimited.co.uk/driveways-kilburn/)
+- [Driveways in Derby](https://jgslimited.co.uk/driveways-derby/)
+- [Driveways in Belper](https://jgslimited.co.uk/driveways-belper/)
+- [Driveways in Ripley](https://jgslimited.co.uk/driveways-ripley/)
+- [Driveways in Heanor](https://jgslimited.co.uk/driveways-heanor/)
+- [Driveways in Kilburn](https://jgslimited.co.uk/driveways-kilburn/)
 
 ## Sitemap
 
-[Sitemap](https://www.jgslimited.co.uk/sitemap.xml)
+[Sitemap](https://jgslimited.co.uk/sitemap.xml)
