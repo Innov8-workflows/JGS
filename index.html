@@ -119,7 +119,7 @@
   --head:'AmpNormal', 'Archivo',sans-serif; --body:'AmpNormal', 'Mulish',sans-serif;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden;overflow-x:clip}
 body{font-family:var(--body);color:var(--ink);background:var(--paper);line-height:1.6;overflow-x:hidden}
 h1,h2,h3,h4{font-family:var(--head);line-height:1.08;font-weight:800;letter-spacing:-.01em}
 a{color:inherit;text-decoration:none}
@@ -716,6 +716,83 @@ header#hdr.scrolled .burger span { background: var(--ink) !important; }
   .svc-card { padding: .95rem .8rem 1rem !important; }
   .svc-card h3 { font-size: .95rem !important; }
   .svc-card p { font-size: .78rem !important; }
+}
+
+/* === Mobile compaction pass — shorter page, denser layouts on phones === */
+@media(max-width:600px){
+  /* tighter section rhythm */
+  .services,.ba,.gallery,.why,.reviews,.about,.areas,.process,.contact{padding:2.6rem 0 !important}
+  .final-cta{padding:3.2rem 0 !important}
+  .sec-head{margin-bottom:1.3rem !important}
+  .sec-head p{font-size:.95rem !important}
+  .hero{min-height:88svh !important}
+
+  /* trust bar */
+  .trust{padding:1.8rem 0 !important}
+  .trust-grid{gap:1rem !important}
+  .trust-grid .n{font-size:1.7rem !important}
+  .trust-grid .l{font-size:.8rem !important}
+  .accred{margin-top:1.4rem !important;padding-top:1.2rem !important}
+
+  /* transformations: smaller portrait videos, tighter rows */
+  .tform-rows{gap:1.8rem !important;margin-top:1.5rem !important}
+  .tform-row{gap:.9rem !important}
+  .tform-media{max-width:270px !important}
+  .tform-copy h3{font-size:1.25rem !important;margin:.3rem 0 .5rem !important}
+  .tform-copy p{font-size:.9rem !important;line-height:1.55 !important}
+
+  /* gallery: 2-up grid, CTA card full-width */
+  .gal-grid{grid-template-columns:repeat(2,1fr) !important;grid-auto-rows:150px !important;gap:.7rem !important}
+  .gal-tall{grid-row:span 1 !important}
+  a.gal-empty{grid-column:1/-1 !important;min-height:150px !important;padding:1.2rem !important}
+  .gal-empty-inner p{margin-bottom:.8rem !important}
+
+  /* why: icon beside heading instead of stacked */
+  .why-grid{gap:.8rem !important}
+  .why-item{display:grid;grid-template-columns:38px 1fr;column-gap:.8rem;padding:1rem 1.1rem !important}
+  .why-item .wi{width:38px;height:38px;margin-bottom:0 !important;border-radius:9px}
+  .why-item .wi svg{width:19px;height:19px}
+  .why-item h3{font-size:1rem !important;margin:0 !important;align-self:center}
+  .why-item p{grid-column:2;font-size:.85rem !important;line-height:1.5 !important;margin-top:.3rem}
+
+  /* reviews */
+  .rev-card{padding:1.2rem !important}
+  .rev-nav{margin-top:1rem !important}
+
+  /* about */
+  .about-grid{gap:1.4rem !important}
+
+  /* areas: pills pair up */
+  .area-grid{grid-template-columns:repeat(2,1fr) !important;gap:.6rem !important}
+  .area-pill{padding:.65rem .8rem !important;font-size:.9rem}
+  .area-pill svg{width:15px;height:15px}
+  .area-note{margin-top:1rem !important;font-size:.88rem !important}
+
+  /* process: number beside text */
+  .proc-grid{gap:.9rem !important}
+  .proc-step{display:grid;grid-template-columns:auto 1fr;column-gap:.9rem;padding-top:0 !important}
+  .proc-step .num{font-size:1.7rem !important;grid-row:1/span 2;line-height:1.15}
+  .proc-step h3{margin:0 !important;font-size:1rem !important;align-self:center}
+  .proc-step p{grid-column:2;font-size:.85rem !important;margin-top:.15rem}
+
+  /* contact: tighter form */
+  .contact-grid{gap:1.6rem !important}
+  .ci-row{padding:.65rem 0 !important}
+  .form-card{padding:1.4rem !important}
+  .field{margin-bottom:.7rem !important}
+  .field input,.field select,.field textarea{padding:.65rem .8rem !important}
+  .field textarea{min-height:70px !important}
+
+  /* footer: two columns, brand block full-width */
+  footer{padding:2.4rem 0 1.2rem !important}
+  .foot-grid{grid-template-columns:1fr 1fr !important;gap:1.4rem 1.2rem !important;margin-bottom:1.4rem !important}
+  .foot-grid > div:first-child{grid-column:1/-1}
+  .foot-col h4{margin-bottom:.6rem !important}
+  .foot-col ul{gap:.4rem !important}
+  .foot-col a{font-size:.88rem !important}
+  .foot-acc img{max-height:44px !important}
+  .foot-accred-row{padding:1.2rem 0 1rem !important;margin-top:1rem !important}
+  .foot-bar{flex-direction:column;gap:.3rem;text-align:center;font-size:.78rem !important}
 }
 
 </style>
