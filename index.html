@@ -732,7 +732,11 @@ header#hdr.scrolled .burger span { background: var(--ink) !important; }
   .trust-grid{gap:1rem !important}
   .trust-grid .n{font-size:1.7rem !important}
   .trust-grid .l{font-size:.8rem !important}
-  .accred{margin-top:1.4rem !important;padding-top:1.2rem !important}
+  /* accreditation badges: one tidy centred row, uniform height */
+  .accred{margin-top:1.4rem !important;padding-top:1.2rem !important;gap:.6rem .9rem !important;align-items:center !important}
+  .accred .lab{flex-basis:100% !important;margin-bottom:.4rem !important}
+  .accred .slot{flex:1 1 0 !important;max-width:none !important;min-width:0 !important}
+  .accred .slot img{height:auto !important;max-height:50px !important;max-width:100% !important;width:auto !important}
 
   /* transformations: smaller portrait videos, tighter rows */
   .tform-rows{gap:1.8rem !important;margin-top:1.5rem !important}
