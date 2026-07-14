@@ -686,6 +686,22 @@ header#hdr.scrolled .burger span { background: var(--ink) !important; }
   header#hdr .burger { display: flex !important; }
 }
 
+/* === Mobile optimisation: stack form + sidebar, compact hero and fields === */
+@media (max-width: 900px) {
+  .contact-layout { grid-template-columns: 1fr !important; padding: 2.6rem 5% !important; gap: 2rem !important; }
+  .contact-form-wrap { padding-right: 0 !important; }
+  .contact-sidebar { position: static !important; }
+}
+@media (max-width: 600px) {
+  .page-hero, .hero-section { min-height: 0 !important; padding: 2.6rem 0 2.2rem !important; }
+  .page-hero p, .hero-section p { font-size: .95rem !important; margin-bottom: 1rem !important; }
+  .contact-form-wrap > p { margin-bottom: 1.4rem !important; }
+  .form-row { grid-template-columns: 1fr !important; gap: 0 !important; }
+  .form-field textarea { height: 100px !important; }
+  .sidebar-box { padding: 28px 22px !important; }
+  .contact-action { padding: 16px 18px !important; gap: 14px !important; }
+}
+
 </style>
 </head>
 <body>
