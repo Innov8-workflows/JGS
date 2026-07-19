@@ -793,6 +793,10 @@ header#hdr.scrolled .burger span { background: var(--ink) !important; }
   .foot-bar{flex-direction:column;gap:.3rem;text-align:center;font-size:.78rem !important}
 }
 
+/* === Gallery CTA button === */
+.gal-cta{text-align:center;margin-top:2.2rem}
+@media(max-width:600px){ .gal-cta{margin-top:1.3rem} .gal-cta .btn{font-size:.88rem;padding:.85rem 1.2rem} }
+
 /* === Facebook reviews link under the Google review slider === */
 .rev-fb{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:1.6rem}
 .rev-fb a{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--head);font-weight:700;font-size:.95rem;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:.85rem 1.4rem;box-shadow:var(--shadow-sm);transition:.25s}
@@ -1021,18 +1025,15 @@ header#hdr.scrolled .burger span { background: var(--ink) !important; }
       <p>A few of our recent driveway and groundwork jobs. Tap any image to view it larger.</p>
     </div>
     <div class="gal-grid">
-      <div class="gal-item gal-tall reveal"><img data-img="gal1" alt="Block paving and tarmac driveway" loading="lazy"><span class="cap">Block paving &amp; tarmac drive</span></div>
+      <div class="gal-item reveal"><img data-img="gal1" alt="Block paving and tarmac driveway" loading="lazy"><span class="cap">Block paving &amp; tarmac drive</span></div>
       <div class="gal-item reveal"><img data-img="gal2" alt="New tarmac driveway with block edging" loading="lazy"><span class="cap">Tarmac drive &amp; edging</span></div>
       <div class="gal-item reveal"><img data-img="gal3" alt="Large tarmac area with fencing" loading="lazy"><span class="cap">Tarmac &amp; fencing</span></div>
       <div class="gal-item reveal"><img data-img="gal4" alt="Driveway project" loading="lazy"><span class="cap">Driveway project</span></div>
-      <a href="/case-studies/" class="gal-empty reveal" aria-label="View all case studies">
-        <div class="gal-empty-inner">
-          <span class="gal-empty-tag">More Work</span>
-          <h4>See the full transformations</h4>
-          <p>Drag-to-compare before &amp; after sliders for every project on our Case Studies page.</p>
-          <span class="gal-empty-cta">View Case Studies <span aria-hidden="true">&rarr;</span></span>
-        </div>
-      </a>
+      <div class="gal-item reveal"><img src="/After4.jpg" alt="Indian stone patio with sleeper edging" loading="lazy"><span class="cap">Patio &amp; garden landscaping</span></div>
+      <div class="gal-item reveal"><img src="/After5.jpg" alt="New tarmac driveway with block edging on a semi-detached home" loading="lazy"><span class="cap">New tarmac driveway</span></div>
+    </div>
+    <div class="gal-cta reveal">
+      <a href="/case-studies/" class="btn btn-dark">See Full Before &amp; After Transformations <span aria-hidden="true">&rarr;</span></a>
     </div>
   </div>
 </section>
