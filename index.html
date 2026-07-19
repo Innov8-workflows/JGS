@@ -793,6 +793,16 @@ header#hdr.scrolled .burger span { background: var(--ink) !important; }
   .foot-bar{flex-direction:column;gap:.3rem;text-align:center;font-size:.78rem !important}
 }
 
+/* === Facebook reviews link under the Google review slider === */
+.rev-fb{text-align:center;margin-top:1.6rem}
+.rev-fb a{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--head);font-weight:700;font-size:.95rem;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:10px;padding:.85rem 1.4rem;box-shadow:var(--shadow-sm);transition:.25s}
+.rev-fb a svg{width:20px;height:20px;color:#1877F2;flex-shrink:0}
+.rev-fb a:hover{border-color:#1877F2;transform:translateY(-2px);box-shadow:var(--shadow)}
+@media(max-width:600px){
+  .rev-fb{margin-top:1.1rem}
+  .rev-fb a{font-size:.88rem;padding:.75rem 1.1rem}
+}
+
 </style>
 <script type="application/ld+json">
 [
@@ -1131,6 +1141,12 @@ header#hdr.scrolled .burger span { background: var(--ink) !important; }
       </div>
     </div>
     <div class="rev-nav" id="revNav"></div>
+    <div class="rev-fb reveal">
+      <a href="https://www.facebook.com/jgsconstruction/reviews/?id=100063537222258&amp;sk=reviews" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        Read our 22 reviews on Facebook
+      </a>
+    </div>
   </div>
 </section>
 
