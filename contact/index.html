@@ -9,7 +9,7 @@
 <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://crm.innov8workflows.co.uk; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://crm.innov8workflows.co.uk; frame-ancestors 'none';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://crm.innov8workflows.co.uk; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://crm.innov8workflows.co.uk https://script.google.com https://script.googleusercontent.com; frame-ancestors 'none';">
 <title>Contact JGS Construction Derbyshire | Free Driveway Quotes</title>
 <meta name="description" content="Contact JGS Construction for a free driveway or groundworks quote in Derbyshire. Call 07702 543174 or WhatsApp Joe. We cover Belper, Ripley, Heanor, Kilburn and Derby.">
 <meta name="keywords" content="contact JGS Construction, driveway quote Derbyshire, free driveway quote Belper, driveway quote Ripley, groundworks quote Derbyshire">
@@ -1009,29 +1009,42 @@ function submitForm() {
   var service = document.getElementById('service').value;
   var message = document.getElementById('message').value.trim();
   if (!name || !phone) { showFormError("Please fill in at least your name and phone number."); return; }
-  var text = "New enquiry via jgslimited.co.uk
-
-Hi JGS, I'd like a quote.
-
-Name: " + name + "
-Phone: " + phone;
-  if (email)   text += "
-Email: " + email;
-  if (address) text += "
-Address: " + address;
-  if (service) text += "
-Service: " + service;
-  if (message) text += "
-
-" + message;
+  var text = "New enquiry via jgslimited.co.uk\n\nHi JGS, I'd like a quote.\n\nName: " + name + "\nPhone: " + phone;
+  if (email)   text += "\nEmail: " + email;
+  if (address) text += "\nAddress: " + address;
+  if (service) text += "\nService: " + service;
+  if (message) text += "\n\n" + message;
+  if (window.jgsSendLead) { window.jgsSendLead({ type: 'form', name: name, phone: phone, email: email, address: address, service: service, message: message, location: 'contact_page_form' }); }
   var url = "https://wa.me/" + JGS_WHATSAPP + "?text=" + encodeURIComponent(text);
   var w = window.open(url, '_blank', 'noopener,noreferrer');
   if (!w) { window.location.href = url; }
 }
 
 </script>
-<script>/* JGS conversion tracking — click_to_call / click_whatsapp / generate_lead */
+<script>/* JGS conversion tracking — GA4 events + Google Sheet lead log */
 (function(){
+  var LEAD_URL = 'https://script.google.com/macros/s/AKfycbxJLHgp-KIW_MXQ9PLPp7j6NIJeVFTA50eVpmWJ6CSCOAFpEcl9kGMnXYAcrX7LxmMs9g/exec';
+  function locOf(el){
+    if(!el || !el.closest) return 'page';
+    if(el.closest('.wa-float')) return 'whatsapp_float';
+    if(el.closest('header')) return 'header';
+    if(el.closest('.hero, .page-hero')) return 'hero';
+    if(el.closest('.form-card, #contactForm, .contact-sidebar')) return 'contact_form';
+    if(el.closest('footer')) return 'footer';
+    return 'page';
+  }
+  function sendLead(data){
+    try{
+      data.page = location.pathname;
+      data.referrer = document.referrer || '';
+      var body = JSON.stringify(data);
+      // sendBeacon survives the WhatsApp app-switch; text/plain avoids a CORS
+      // preflight that Apps Script cannot answer.
+      if(navigator.sendBeacon && navigator.sendBeacon(LEAD_URL, new Blob([body], {type:'text/plain;charset=UTF-8'}))) return;
+      fetch(LEAD_URL, {method:'POST', mode:'no-cors', keepalive:true, headers:{'Content-Type':'text/plain;charset=UTF-8'}, body:body});
+    }catch(e){}
+  }
+  window.jgsSendLead = sendLead;
   function track(name, params){ if(typeof window.gtag==='function'){ try{ window.gtag('event', name, params||{}); }catch(e){} } }
   document.addEventListener('click', function(e){
     var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
@@ -1040,9 +1053,11 @@ Service: " + service;
     if(href.slice(0,4).toLowerCase()==='tel:'){
       track('click_to_call', { phone_number: href.slice(4) });
       track('generate_lead', { method: 'phone' });
+      sendLead({ type:'call_click', phone: href.slice(4), location: locOf(a) });
     } else if(/wa\.me|whatsapp/i.test(href)){
       track('click_whatsapp', { link_url: href });
       track('generate_lead', { method: 'whatsapp' });
+      sendLead({ type:'whatsapp_click', location: locOf(a) });
     }
   }, true);
 })();

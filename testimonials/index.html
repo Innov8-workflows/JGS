@@ -1035,8 +1035,30 @@ if(burger && navlinks){
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
 })();
 </script>
-<script>/* JGS conversion tracking — click_to_call / click_whatsapp / generate_lead */
+<script>/* JGS conversion tracking — GA4 events + Google Sheet lead log */
 (function(){
+  var LEAD_URL = 'https://script.google.com/macros/s/AKfycbxJLHgp-KIW_MXQ9PLPp7j6NIJeVFTA50eVpmWJ6CSCOAFpEcl9kGMnXYAcrX7LxmMs9g/exec';
+  function locOf(el){
+    if(!el || !el.closest) return 'page';
+    if(el.closest('.wa-float')) return 'whatsapp_float';
+    if(el.closest('header')) return 'header';
+    if(el.closest('.hero, .page-hero')) return 'hero';
+    if(el.closest('.form-card, #contactForm, .contact-sidebar')) return 'contact_form';
+    if(el.closest('footer')) return 'footer';
+    return 'page';
+  }
+  function sendLead(data){
+    try{
+      data.page = location.pathname;
+      data.referrer = document.referrer || '';
+      var body = JSON.stringify(data);
+      // sendBeacon survives the WhatsApp app-switch; text/plain avoids a CORS
+      // preflight that Apps Script cannot answer.
+      if(navigator.sendBeacon && navigator.sendBeacon(LEAD_URL, new Blob([body], {type:'text/plain;charset=UTF-8'}))) return;
+      fetch(LEAD_URL, {method:'POST', mode:'no-cors', keepalive:true, headers:{'Content-Type':'text/plain;charset=UTF-8'}, body:body});
+    }catch(e){}
+  }
+  window.jgsSendLead = sendLead;
   function track(name, params){ if(typeof window.gtag==='function'){ try{ window.gtag('event', name, params||{}); }catch(e){} } }
   document.addEventListener('click', function(e){
     var a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
@@ -1045,9 +1067,11 @@ if(burger && navlinks){
     if(href.slice(0,4).toLowerCase()==='tel:'){
       track('click_to_call', { phone_number: href.slice(4) });
       track('generate_lead', { method: 'phone' });
+      sendLead({ type:'call_click', phone: href.slice(4), location: locOf(a) });
     } else if(/wa\.me|whatsapp/i.test(href)){
       track('click_whatsapp', { link_url: href });
       track('generate_lead', { method: 'whatsapp' });
+      sendLead({ type:'whatsapp_click', location: locOf(a) });
     }
   }, true);
 })();
