@@ -2,11 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://crm.innov8workflows.co.uk; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://crm.innov8workflows.co.uk https://script.google.com https://script.googleusercontent.com; object-src 'none'; base-uri 'self'; form-action 'self'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#d10a0a">
-<meta name="format-detection" content="telephone=yes">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="format-detection" content="telephone=yes">
 <meta name="google-site-verification" content="zYhMlhzRaNtRrF3I72PPHgUwlZkDOrDKCaid8Om6aNw">
 <meta name="google-site-verification" content="_koP6xUaULfBYxdyNQ50eSfMoSbcKncF-2Wo23xlR04">
@@ -1263,6 +1261,7 @@ header#hdr.scrolled .burger span { background: var(--ink) !important; }
         </select>
       </div>
       <div class="field"><label for="f-msg">Details</label><textarea id="f-msg" placeholder="Rough size, location and what you're after…"></textarea></div>
+      <input type="text" name="botcheck" id="f-botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
       <button class="btn btn-red" id="sendWa">
         <svg class="wa-ic" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A7.85 7.85 0 0 0 12.05 4a7.94 7.94 0 0 0-6.9 11.9L4 20l4.2-1.1a7.9 7.9 0 0 0 3.8 1h.05A7.94 7.94 0 0 0 17.6 6.32zM12.05 18.5a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.5.65.67-2.43-.16-.25a6.59 6.59 0 1 1 5.59 3.09zm3.62-4.93c-.2-.1-1.17-.58-1.35-.64s-.31-.1-.44.1-.51.64-.62.77-.23.15-.43.05a5.39 5.39 0 0 1-1.59-.98 6 6 0 0 1-1.1-1.37c-.11-.2 0-.3.09-.4s.2-.23.3-.35a1.34 1.34 0 0 0 .2-.33.37.37 0 0 0 0-.35c0-.1-.44-1.06-.6-1.45s-.32-.33-.44-.34h-.38a.72.72 0 0 0-.52.24 2.18 2.18 0 0 0-.68 1.62 3.79 3.79 0 0 0 .79 2 8.66 8.66 0 0 0 3.32 2.93c.46.2.83.32 1.11.41a2.69 2.69 0 0 0 1.23.08 2 2 0 0 0 1.32-.93 1.65 1.65 0 0 0 .11-.93c-.05-.08-.18-.13-.38-.23z"/></svg>
         Send via WhatsApp
@@ -1588,7 +1587,8 @@ document.getElementById('sendWa').addEventListener('click',()=>{
   if(p)t+='%0APhone: '+encodeURIComponent(p);
   if(s)t+='%0AService: '+encodeURIComponent(s);
   if(m)t+='%0ADetails: '+encodeURIComponent(m);
-  if(window.jgsSendLead){ window.jgsSendLead({ type:'form', name:n, phone:p, service:s, message:m, location:'homepage_quote_form' }); }
+  const bot=document.getElementById('f-botcheck');
+  if(window.jgsSendLead && !(bot && bot.value)){ window.jgsSendLead({ type:'form', name:n, phone:p, service:s, message:m, location:'homepage_quote_form' }); }
   window.open('https://wa.me/447702543174?text='+t,'_blank');
 });
 

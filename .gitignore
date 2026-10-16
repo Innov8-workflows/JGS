@@ -21,3 +21,6 @@ New style/
 # Screenshots / scratch
 /screenshot*.PNG
 /screenshot*.png
+
+# Built output (tools/build-site.js); published by the Pages workflow
+_site/

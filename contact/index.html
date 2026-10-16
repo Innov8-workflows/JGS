@@ -6,10 +6,9 @@
 <meta name="theme-color" content="#d10a0a">
 <meta name="format-detection" content="telephone=yes">
 <meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
 <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://crm.innov8workflows.co.uk; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com https://crm.innov8workflows.co.uk https://script.google.com https://script.googleusercontent.com; frame-ancestors 'none';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://crm.innov8workflows.co.uk; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; media-src 'self'; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com https://crm.innov8workflows.co.uk https://script.google.com https://script.googleusercontent.com; object-src 'none'; base-uri 'self'; form-action 'self'">
 <title>Contact JGS Construction Derbyshire | Free Driveway Quotes</title>
 <meta name="description" content="Contact JGS Construction for a free driveway or groundworks quote in Derbyshire. Call 07702 543174 or WhatsApp Joe. We cover Belper, Ripley, Heanor, Kilburn and Derby.">
 <meta name="keywords" content="contact JGS Construction, driveway quote Derbyshire, free driveway quote Belper, driveway quote Ripley, groundworks quote Derbyshire">
@@ -765,6 +764,7 @@ header#hdr.scrolled .burger span { background: var(--ink) !important; }
         </select>
       </div>
       <div class="form-field"><label for="message">Your Message / Project Details</label><textarea id="message" placeholder="Tell us about your project - size, any specific requirements, access, or questions..."></textarea></div>
+      <input type="text" name="botcheck" id="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
       <button class="submit-btn" onclick="submitForm()"><svg viewBox="0 0 24 24" style="width:22px;height:22px;fill:currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>Send via WhatsApp</button>
       <p class="form-subtext">Opens WhatsApp with your details pre-filled - Joe will reply promptly.</p>
       <p id="formError" class="form-error" style="display:none"></p>
@@ -1014,7 +1014,8 @@ function submitForm() {
   if (address) text += "\nAddress: " + address;
   if (service) text += "\nService: " + service;
   if (message) text += "\n\n" + message;
-  if (window.jgsSendLead) { window.jgsSendLead({ type: 'form', name: name, phone: phone, email: email, address: address, service: service, message: message, location: 'contact_page_form' }); }
+  var bot = document.getElementById('botcheck');
+  if (window.jgsSendLead && !(bot && bot.value)) { window.jgsSendLead({ type: 'form', name: name, phone: phone, email: email, address: address, service: service, message: message, location: 'contact_page_form' }); }
   var url = "https://wa.me/" + JGS_WHATSAPP + "?text=" + encodeURIComponent(text);
   var w = window.open(url, '_blank', 'noopener,noreferrer');
   if (!w) { window.location.href = url; }

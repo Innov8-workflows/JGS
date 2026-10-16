@@ -1,7 +1,8 @@
 name: Deploy static site to GitHub Pages
 
 # The legacy Jekyll builder fails on this repo (large inline-HTML pages).
-# This deploys the repo as-is via GitHub Actions instead.
+# This deploys via GitHub Actions instead, publishing only _site/ (web files,
+# comments stripped) built by tools/build-site.js; the rest of the repo is never served.
 
 on:
   push:
@@ -29,10 +30,12 @@ jobs:
         uses: actions/checkout@v4
       - name: Configure Pages
         uses: actions/configure-pages@v5
+      - name: Build _site
+        run: node tools/build-site.js
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: '_site'
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
