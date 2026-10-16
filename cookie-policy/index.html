@@ -954,13 +954,15 @@ function resetCookieConsent() {
   }
   function sendLead(data){
     try{
+      var bot = document.querySelector('input[name="botcheck"]');
+      if(bot && bot.value) return;
       data.page = location.pathname;
       data.referrer = document.referrer || '';
       var body = JSON.stringify(data);
-      // sendBeacon survives the WhatsApp app-switch; text/plain avoids a CORS
-      // preflight that Apps Script cannot answer.
-      if(navigator.sendBeacon && navigator.sendBeacon(LEAD_URL, new Blob([body], {type:'text/plain;charset=UTF-8'}))) return;
-      fetch(LEAD_URL, {method:'POST', mode:'no-cors', keepalive:true, headers:{'Content-Type':'text/plain;charset=UTF-8'}, body:body});
+      // fetch+keepalive, never sendBeacon: Apps Script answers with a 302 that some
+      // browsers drop a beacon on while it still reports success. text/plain avoids
+      // a CORS preflight that Apps Script cannot answer.
+      fetch(LEAD_URL, {method:'POST', mode:'no-cors', keepalive:true, headers:{'Content-Type':'text/plain;charset=UTF-8'}, body:body}).catch(function(){});
     }catch(e){}
   }
   window.jgsSendLead = sendLead;
