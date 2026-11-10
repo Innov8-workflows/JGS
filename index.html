@@ -34,7 +34,7 @@
 <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://jgslimited.co.uk/#business","name":"JGS Construction Limited","alternateName":"JGS Limited","description":"Derbyshire driveway contractor specialising in block paving, tarmac, patios, drop kerbs, fencing, landscaping and drainage work. 35+ years' experience.","image":"https://jgslimited.co.uk/JGS_Logo.jpg","logo":"https://jgslimited.co.uk/JGS_Logo.jpg","url":"https://jgslimited.co.uk/","telephone":"+447702543174","email":"info@jgslimited.co.uk","priceRange":"££","address":{"@type":"PostalAddress","streetAddress":"3 Tumbling Hill","addressLocality":"Heage, Belper","addressRegion":"Derbyshire","postalCode":"DE56 2BX","addressCountry":"GB"},"geo":{"@type":"GeoCoordinates","latitude":53.044,"longitude":-1.439},"areaServed":[{"@type":"AdministrativeArea","name":"Derbyshire"},{"@type":"City","name":"Ripley"},{"@type":"City","name":"Alfreton"},{"@type":"City","name":"Belper"},{"@type":"City","name":"Heanor"},{"@type":"City","name":"Ilkeston"},{"@type":"City","name":"Eastwood"},{"@type":"City","name":"Langley Mill"},{"@type":"City","name":"Kilburn"},{"@type":"City","name":"Horsley"},{"@type":"City","name":"Horsley Woodhouse"},{"@type":"City","name":"Heage"},{"@type":"City","name":"Codnor"},{"@type":"City","name":"Swanwick"},{"@type":"City","name":"Somercotes"},{"@type":"City","name":"Denby"},{"@type":"City","name":"Crich"}],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"16:00"}],"sameAs":["https://www.facebook.com/jgsconstruction/"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"17","bestRating":"5","worstRating":"1"}}
+{"@context":"https://schema.org","@type":"LocalBusiness","@id":"https://jgslimited.co.uk/#business","name":"JGS Construction Limited","alternateName":"JGS Limited","description":"Derbyshire driveway contractor specialising in block paving, tarmac, patios, drop kerbs, fencing, landscaping and drainage work. 35+ years' experience.","image":"https://jgslimited.co.uk/JGS_Logo.jpg","logo":"https://jgslimited.co.uk/JGS_Logo.jpg","url":"https://jgslimited.co.uk/","telephone":"+447702543174","email":"info@jgslimited.co.uk","priceRange":"££","address":{"@type":"PostalAddress","streetAddress":"3 Tumbling Hill","addressLocality":"Heage, Belper","addressRegion":"Derbyshire","postalCode":"DE56 2BX","addressCountry":"GB"},"geo":{"@type":"GeoCoordinates","latitude":53.044,"longitude":-1.439},"areaServed":[{"@type":"AdministrativeArea","name":"Derbyshire"},{"@type":"City","name":"Ripley"},{"@type":"City","name":"Alfreton"},{"@type":"City","name":"Belper"},{"@type":"City","name":"Heanor"},{"@type":"City","name":"Ilkeston"},{"@type":"City","name":"Eastwood"},{"@type":"City","name":"Langley Mill"},{"@type":"City","name":"Kilburn"},{"@type":"City","name":"Horsley"},{"@type":"City","name":"Horsley Woodhouse"},{"@type":"City","name":"Heage"},{"@type":"City","name":"Codnor"},{"@type":"City","name":"Swanwick"},{"@type":"City","name":"Somercotes"},{"@type":"City","name":"Denby"},{"@type":"City","name":"Crich"}],"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"07:00","closes":"18:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Saturday","opens":"08:00","closes":"16:00"}],"sameAs":["https://www.facebook.com/jgsconstruction/","https://www.google.com/maps/place/J+G+S+Construction+Services+Ltd/@53.0483212,-1.4515682,17z/data=!4m8!3m7!1s0x4879f2bffd099a4b:0xc5305a97bf5bb750!8m2!3d53.0483212!4d-1.4489933!9m1!1b1!16s%2Fg%2F1v6l7060?entry=ttu&g_ep=EgoyMDI2MDcxNS4wIKXMDSoASAFQAw%3D%3D"],"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.8","reviewCount":"17","bestRating":"5","worstRating":"1"}}
 </script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","@id":"https://jgslimited.co.uk/#website","url":"https://jgslimited.co.uk/","name":"JGS Construction","alternateName":["JGS Construction Limited","JGS Limited"],"publisher":{"@id":"https://jgslimited.co.uk/#business"}}
@@ -374,11 +374,13 @@ footer{background:#0d0f13;color:rgba(255,255,255,.7);padding:4rem 0 1.6rem}
 .reveal.in{opacity:1;transform:none}
 
 /* ---------- RESPONSIVE ---------- */
-@media(max-width:980px){
+@media(max-width:1140px){
   .nav-links{display:none}
   .burger{display:flex}
   .nav-links.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:#fff;padding:1.4rem 5%;gap:1.1rem;box-shadow:var(--shadow);align-items:flex-start}
   .nav-links.open a{color:var(--ink)}
+}
+@media(max-width:980px){
   .trust-grid{grid-template-columns:repeat(2,1fr);gap:1.8rem}
   .svc-grid,.why-grid,.proc-grid{grid-template-columns:repeat(2,1fr)}
   .ba-wrap,.about-grid,.contact-grid{grid-template-columns:1fr;gap:2rem}
@@ -662,11 +664,11 @@ header#hdr .nav-links.open a { color: var(--ink-2) !important; }
 header#hdr .burger span { background: #fff !important; }
 header#hdr.scrolled .burger span { background: var(--ink) !important; }
 /* Force responsive breakpoint behaviour */
-@media (min-width: 981px) {
+@media (min-width: 1141px) {
   header#hdr .nav-links { display: flex !important; }
   header#hdr .burger { display: none !important; }
 }
-@media (max-width: 980px) {
+@media (max-width: 1140px) {
   header#hdr .nav-links:not(.open) { display: none !important; }
   header#hdr .burger { display: flex !important; }
 }
